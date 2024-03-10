@@ -24,9 +24,9 @@ console.log(values);
  
  
   return (
-    <div className=' flex flex-col w-full h-screen'>
+    <div className=' flex flex-col h-[100vh]'>
 
-    <div className='flex flex-col justify-center items-center '>
+    <div className='flex flex-col flex-1 justify-center items-center '>
 
     <div className=' flex flex-col gap-2 md:justify-center  md:items-center  w-[280px] md:w-[450px] '>
         <div className=' relative flex flex-col md:justify-center md:items-center shadow-lg bg-fuchsia-200 border border-slate-400 backdrop-filter backdrop-blur-sm bg-opacity-30  rounded-lg'>
@@ -100,9 +100,9 @@ console.log(values);
     <div className='h-1/10'>
       
       
-    <div className='border bg-white h-20 '>
-      <div className='flex  items-center'>
-        <img className=' w-20' src={pic2} alt='' />
+    <div className='border bg-white h-24 '>
+      <div className='flex justify-center md:justify-between '>
+        <img className='md:ml-10 mt-2 w-[150px]' src={pic2} alt='' />
       </div>
 
     </div>
