@@ -4,7 +4,10 @@
 
 
 body{
-  background-color: rgb(87, 201, 106);
+  background-color: rgb(109, 201, 117);
   
+}
+.custom-bg-color {
+  background-color: rgb(238, 243, 251);
 }
 
