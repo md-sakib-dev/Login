@@ -1,6 +1,4 @@
 import React, { useState } from 'react'
-import logo from '../assets/logo.jpg'
-import { Link } from "react-router-dom";
 import {useFormik} from 'formik'
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
@@ -32,7 +30,7 @@ console.log(values);
         <div className=' relative flex flex-col md:justify-center md:items-center shadow-lg bg-fuchsia-200 border border-slate-400 backdrop-filter backdrop-blur-sm bg-opacity-30  rounded-lg'>
             <div className='ml-20 md:ml-6 '>
             {/* <img className='w-28' src={pic} alt="" /> */}
-            <h1 className='text-2xl mt-5 font-bold  text-black'>artisanPOS</h1>
+            <h1 className='text-2xl mt-5 font-signature  text-black'>artisanPOS</h1>
             <span className="left-0 bottom-0 w-full h-1 bg-black"></span>
 
             </div>

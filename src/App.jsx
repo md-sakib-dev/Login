@@ -1,12 +1,13 @@
 import { useState } from 'react'
-import Login from './Pages/Login'
+import Body from './Componenet/Body'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
    <>
-  <Login/>
+   <Body/>
+
    </>
   )
 }
