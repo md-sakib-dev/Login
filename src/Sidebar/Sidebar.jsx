@@ -25,14 +25,14 @@ import { FaRegMessage } from "react-icons/fa6";
 const Sidebar = () => {
     
     let isTabletMid = useMediaQuery({ query: "(max-width: 768px)" });
-    const [isOpen, setIsOpen] = useState(isTabletMid ? false : true);
+    const [isOpen, setIsOpen] = useState(isTabletMid ? false:true);
 
     useEffect(()=>{
         if(isTabletMid){
             setIsOpen(false)
         }
         else{
-            setIsOpen(true)
+            setIsOpen(false)
         }
 
     },[isTabletMid])
@@ -106,6 +106,7 @@ const Sidebar = () => {
       ];
     
   return (
+    <div className='h-full'>
     <div>
          <div
         onClick={() => setIsOpen(false)}
@@ -115,7 +116,7 @@ const Sidebar = () => {
       ></div>
       <div className='w-full h-20 flex justify-center md:justify-between  items-center fixed bg-slate-50 '>
        
-        <div className='mr-20 ' onClick={()=>setIsOpen(true)}>
+        <div className='mr-20' onClick={()=>setIsOpen(true)}>
 
            <CiMenuBurger size={25}/>
               </div>
@@ -243,16 +244,20 @@ const Sidebar = () => {
 
     <CiMenuBurger size={25}/>
     </div>
-    {/* <div className='h-1/10'>
+
+    </div>
+
+    <div className='fixed bottom-0 w-full'>
       
       
-      <div className='border bg-white h-24 '>
-        <div className='flex justify-center md:justify-between '>
-          <img className='md:ml-10 mt-2 w-[150px]' src={pic2} alt='' />
+      <div className='border bg-white h-14 '>
+        <div className='flex justify-center  items-center'>
+          <img className='md:ml-10 mt-2 ' width={90} src={pic2} alt='' />
         </div>
   
       </div>
-      </div>    */}
+      </div>   
+
 
     </div>
   )

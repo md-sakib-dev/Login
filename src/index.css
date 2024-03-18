@@ -27,3 +27,8 @@ body{
 .active{
   @apply bg-blue-100 text-blue-600;
 }
+@media (max-width: 768px) {
+  .tablet-and-desktop-only {
+    display: none;
+  }
+}

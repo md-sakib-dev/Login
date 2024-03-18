@@ -26,6 +26,7 @@ import StockTransfer from '../Pages/Inventory/StockTransfer'
 import GiftTransfer from '../Pages/Inventory/GiftTransfer'
 import Reports from '../Componenet/Reports'
 import Changepass from '../Pages/Users/Changepass';
+import Footer from '../Footer';
 
 
 const Body = () => {
@@ -59,6 +60,7 @@ const Body = () => {
         <Route path="/giftT" element={<GiftTransfer/>}/>
         <Route path="/change" element={<Changepass/>}/>
         </Routes>
+        {/* <Footer/> */}
     </RootLayout>
     </>
   )
