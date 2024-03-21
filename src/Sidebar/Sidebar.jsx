@@ -100,8 +100,8 @@ const Sidebar = () => {
           {
             name: "Admin",
             icon: RiAdminLine,
-            menus: ["New User","Edit User","Edit Product","New Product", "Edit Price",  "Configuration"],
-            path: ["/newuser","/edituser","/editproduct","/newproduct","/editprice","/configure"],
+            menus: ["New User","UserList","Edit Product","New Product", "Edit Price",  "Configuration"],
+            path: ["/newuser","/userlist","/editproduct","/newproduct","/editprice","/configure"],
           },
       ];
     
@@ -114,7 +114,7 @@ const Sidebar = () => {
           isOpen ? "block" : "hidden"
         } `}
       ></div>
-      <div className='w-full h-20 flex justify-center md:justify-between  items-center fixed bg-slate-50 '>
+      <div className='w-full h-16 flex justify-center md:justify-between  items-center fixed bg-slate-50 '>
        
         <div className='mr-20' onClick={()=>setIsOpen(true)}>
 
@@ -240,19 +240,19 @@ const Sidebar = () => {
     </motion.div>
 
     </motion.div>
-    <div className='m-3 md:hidden' onClick={()=>setIsOpen(true)}>
+    {/* <div className='m-3 md:hidden' onClick={()=>setIsOpen(true)}>
 
     <CiMenuBurger size={25}/>
-    </div>
+    </div> */}
 
     </div>
 
     <div className='fixed bottom-0 w-full'>
       
       
-      <div className='border bg-white h-14 '>
+      <div className='border bg-white h-10 '>
         <div className='flex justify-center  items-center'>
-          <img className='md:ml-10 mt-2 ' width={90} src={pic2} alt='' />
+          <img className='md:ml-10  ' width={90} src={pic2} alt='' />
         </div>
   
       </div>

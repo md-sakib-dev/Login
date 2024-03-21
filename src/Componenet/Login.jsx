@@ -53,7 +53,7 @@ console.log(values);
               ) : null}
                     </div>
                     <div className='flex flex-col gap-3 relative'>
-                        <input className=" bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:focus:border-blue-500  focus:outline-none focus:ring-0 focus:text-black focus:border-blue-600 peer text-sm text-black  py-2.3 px-0 block rounded-md  w-[250px] md:w-[300px] h-10  " type={visible? "text" :"password"}  name="password" id="password" placeholder=''  value={values.password} onChange={handleChange} onBlur={handleBlur}/>
+                        <input className=" bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:focus:border-blue-500  focus:outline-none focus:ring-0 focus:text-black focus:border-blue-600 peer text-sm text-black  py-2.3 px-0 block rounded-md  w-[250px] md:w-[300px] h-10 " type={visible? "text" :"password"}  name="password" id="password" placeholder=''  value={values.password} onChange={handleChange} onBlur={handleBlur}/>
                         <label htmlFor="password" className='absolute text-md text-black duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-800 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 font-semibold'>
                             Password
                         </label>

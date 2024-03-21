@@ -4,6 +4,7 @@ import RootLayout from '../RootLayout';
 import LandingPage from '../Componenet/LandingPage'
 import NewUser from '../Pages/Admin/NewUser'
 import NewProduct from '../Pages/Admin/NewProduct'
+import UserList from '../Pages/Admin/UserList'
 import EditUser from '../Pages/Admin/EditUser'
 import EditProduct from '../Pages/Admin/EditProduct'
 import EditPrice from '../Pages/Admin/EditPrice'
@@ -38,6 +39,7 @@ const Body = () => {
         <Route path="/report" element={<Reports/>} />
         <Route path="/newuser" element={<NewUser/>}/>
         <Route path="/newproduct" element={<NewProduct/>}/>
+        <Route path="/userlist" element={<UserList/>}/>
         <Route path="/edituser" element={<EditUser/>}/>
         <Route path="/editproduct" element={<EditProduct/>}/>
         <Route path="/editprice" element={<EditPrice/>}/>

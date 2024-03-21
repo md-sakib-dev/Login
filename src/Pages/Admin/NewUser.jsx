@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import { FaRegEye, FaRegEyeSlash ,FaUser } from "react-icons/fa";
-import { MdEmail } from "react-icons/md";
+import { FaRegEye, FaRegEyeSlash ,FaUser, FaUserTag  } from "react-icons/fa";
+import { BiSolidUserCheck } from "react-icons/bi";
 import { useFormik } from 'formik';
 import { createUserSchema } from '../../schemas';
 
@@ -9,9 +9,12 @@ const NewUser = () => {
 
   const initialValues= {
     name:"",
-    email: "",
+    employee_name: "",
+    employee_id:"",
     password:"",
     confirm_password:"",
+    Role:"",
+    Branch:"",
   }
   const {values, errors,touched, handleBlur,handleChange,handleSubmit} =useFormik({
 
@@ -19,16 +22,18 @@ const NewUser = () => {
     validationSchema:  createUserSchema,
     onSubmit: (values,action)=>{
       console.log(values)
-action.resetForm();
-    }
+      action.resetForm();
+    },
   })
   return (
-    <div className=' w-96 mx-auto border-2  rounded-2xl mt-20 flex flex-col justify-center items-center'>
+    <div className='flex flex-col justify-center items-center'>
+
+    <div className=' w-80 md:w-96 mx-auto border-2  rounded-2xl mt-20'>
         <h1 className='font-signature font-bold text-2xl text-center border-b border-slate-200 py-3'>Add New User</h1>
        
       <div className='flex flex-col  justify-between items-center'>
         <div className='mt-5'>
-        <form className="flex flex-col  gap-5 p-2 ml-2" onSubmit={handleSubmit}>
+        <form className="flex flex-col items-center  gap-2 p-2 ml-2" onSubmit={handleSubmit} >
           <div className=' flex flex-col gap-2'>
           <div className='flex flex-col gap-2  relative'>
         <input className="bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:text-black focus:border-blue-600 peer text-sm text-black py-2.3 px-0 block rounded-md w-[250px] md:w-[300px] h-10" type="text" name="name" id="name" value={values.name} onChange={handleChange} onBlur={handleBlur} placeholder=''  />
@@ -41,34 +46,50 @@ action.resetForm();
         {errors.name && touched.name ? (<p className="text-red-700 font-semibold">{errors.name}</p>):null}
     </div>
           <div className=' flex flex-col  gap-2 relative'>
-                        <input className=' bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:focus:border-blue-500  focus:outline-none focus:ring-0 focus:text-black focus:border-blue-600 peer text-sm text-black  py-2.3 px-0 block rounded-md  w-[250px] md:w-[300px] h-10 ' type="email"  name='email' id='email'  value={values.email} onChange={handleChange} onBlur={handleBlur}   placeholder="" />
+                        <input className=' bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:focus:border-blue-500  focus:outline-none focus:ring-0 focus:text-black focus:border-blue-600 peer text-sm text-black  py-2.3 px-0 block rounded-md  w-[250px] md:w-[300px] h-10 ' type="text"  name='employee_name' id='employee_name'  value={values.employee_name} onChange={handleChange} onBlur={handleBlur}   placeholder="" />
                         <label htmlFor="email" className='absolute text-md text-black duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-800 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 font-semibold'> 
-                          Email
+                          Employee Name
                         </label>
                         <div>
 
-                        <MdEmail size={20} className='absolute top-4 right-4'/>
+                        <FaUserTag size={20} className='absolute top-4 right-4'/>
                         </div>
                         
-                {errors.email && touched.email ?(<p className=" text-red-700 font-semibold">{errors.email}</p>): null}
+                {errors.employee_name && touched.employee_name ?(<p className=" text-red-700 font-semibold">{errors.employee_name}</p>): null}
             
                     </div>
-                    {/* <div>
-               <select className="bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:text-black focus:border-blue-600 peer text-sm text-black py-2.3 px-0 block rounded-md w-[250px] md:w-[300px] h-10 font-semibold">
-            <option value="" disabled selected>Select an Role</option>
-            <option value="option1">Option 1</option>
-            <option value="option2">Option 2</option>
-            <option value="option3">Option 3</option>
+                    <div className=' flex flex-col  gap-2 relative'>
+                        <input className=' bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:focus:border-blue-500  focus:outline-none focus:ring-0 focus:text-black focus:border-blue-600 peer text-sm text-black  py-2.3 px-0 block rounded-md  w-[250px] md:w-[300px] h-10 ' type="number"  name='employee_id' id='employee_id'  value={values.employee_id} onChange={handleChange} onBlur={handleBlur}   placeholder="" />
+                        <label htmlFor="email" className='absolute text-md text-black duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-800 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 font-semibold'> 
+                          Employee ID
+                        </label>
+                        <div>
+
+                        <BiSolidUserCheck size={20} className='absolute top-4 right-4'/>
+                        </div>
+                        
+                {errors.employee_id && touched.employee_id ?(<p className=" text-red-700 font-semibold">{errors.employee_id}</p>): null}
+            
+                    </div>
+                    <div>
+               <select className="bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:text-black focus:border-blue-600 peer text-sm text-black py-2.3 px-0 block rounded-md w-[250px] md:w-[300px] h-10 font-semibold" name='Role' as='select' onChange={handleChange}>
+            <option value="" >Select an Role</option>
+            <option value="Admin">Admin</option>
+            <option value="Branch Manager">Branch Manager</option>
+            <option value="Pos Operator">Pos Operator</option>
+            <option value="Pos Verifier">Pos Verifier</option>
         </select>
+        {errors.Role && touched.Role ?(<p className=" text-red-700 font-semibold">{errors.Role}</p>): null}
                </div>
                <div>
-               <select className="bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:text-black focus:border-blue-600 peer text-sm text-black py-2.3 px-0 block rounded-md w-[250px] md:w-[300px] h-10 font-semibold">
-            <option value="" disabled selected>Select an Branch</option>
+               <select className="bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:text-black focus:border-blue-600 peer text-sm text-black py-2.3 px-0 block rounded-md w-[250px] md:w-[300px] h-10 font-semibold" name='Branch' as="select" onChange={handleChange}>
+            <option value="" >Select an Branch</option>
             <option value="option1">Option 1</option>
             <option value="option2">Option 2</option>
             <option value="option3">Option 3</option>
         </select>
-               </div> */}
+        {errors.Branch && touched.Branch ?(<p className=" text-red-700 font-semibold">{errors.Branch}</p>): null}
+               </div>
           </div>
                     
                    
@@ -103,12 +124,12 @@ action.resetForm();
               
                </div>
                
-              
-            
                <div className="flex justify-center py-2 mb-5 bg-red-600 mt-2 w-44 text-white  rounded-lg h-9 hover:opacity-90 hover:text-black hover:bg-emerald-500">
-              <button className="">Create</button>
+              <button className="" type='submit'>Create</button>
 
               </div>
+              
+            
             
 
                 </form>
@@ -118,6 +139,7 @@ action.resetForm();
       </div>
 
 
+    </div>
     </div>
   )
 }
