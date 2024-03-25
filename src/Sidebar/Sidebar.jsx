@@ -110,7 +110,7 @@ const Sidebar = () => {
     <div>
          <div
         onClick={() => setIsOpen(false)}
-        className={`md:hidden fixed inset-0 max-h-screen z-[998] bg-black/50 ${
+        className={` fixed inset-0 max-h-screen z-[998] bg-black/50 md:bg-white/10 ${
           isOpen ? "block" : "hidden"
         } `}
       ></div>

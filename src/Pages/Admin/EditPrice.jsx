@@ -24,25 +24,25 @@ const EditPrice = () => {
          <form className='mt-5  border w-80 md:w-full  rounded-lg' onSubmit={handleSubmit}>
           <div className=' flex flex-col md:flex-row justify-around items-center md:items-start mt-2 md:mt-5 gap-2'>   
               <div className='flex flex-col'>
-              <label for="id" class="mb-2 text-sm">Product Name</label>
-              <input type="text" value={""} class="border  border-gray-300 bg-gray-200 rounded-md px-2 py-2 mb-2 w-48" />
+              <label for="id" class=" text-sm">Product Name</label>
+              <input type="text" value={""} class="border  border-gray-300 bg-gray-200 rounded-md px-2 py-2 mb-2 w-[250px]" />
               </div>
               <div className='flex flex-col'>
-              <label htmlFor="message" className='mb-2 text-sm'>Product's Description</label>
-              <textarea id="message" name="message" rows="1" cols="6" class="border border-gray-300 bg-gray-200 rounded-md px-3 py-2  w-64">  
+              <label htmlFor="message" className='text-sm'>Product's Description</label>
+              <textarea id="message" name="message" rows="1" cols="4" class="border border-gray-300 bg-gray-200 rounded-md px-2 py-2  w-64">  
               </textarea>
               </div>
           </div>
           <div className=' flex flex-col md:flex-row justify-around items-center mt-2 md:mt-5 '>
-            <div className='flex flex-col  md:mr-2'>
-              <label for="id" class="mb-2 text-sm">Current Price</label>
-              <input type="text" value={""} class="border  border-gray-300 bg-gray-200 rounded-md px-2 py-2 mb-2 w-48" />
+            <div className='flex flex-col'>
+              <label for="id" class=" text-sm">Current Price</label>
+              <input type="text" value={""} class="border  border-gray-300 bg-gray-200 rounded-md px-2 py-2 mb-2 w-[250px]" />
               </div>
 
-              <div className='flex flex-col gap-0  md:mr-16 '>
-              <label for="id" class="mb-2 text-sm">New Price </label>
-              <input  type="number" name="price" id="price" value={values.price} onChange={handleChange} onBlur={handleBlur} placeholder=''  class="border  border-gray-300 rounded-md px-2 py-2 mb-2 w-48"/>
-              {errors.price && touched.price ? (<p className="text-red-700 font-semibold">{errors.price}</p>):null}
+              <div className='flex flex-col gap-0 '>
+              <label for="id" class="text-sm">New Price </label>
+              <input  type="number" name="price" id="price" value={values.price} onChange={handleChange} onBlur={handleBlur} placeholder=''  class="border border-gray-300 bg-gray-200 rounded-md px-2 py-2 mb-2 w-[250px]"/>
+              {errors.price && touched.price ? (<p className="text-red-700 text-[12px] font-semibold">{errors.price}</p>):null}
               </div>
           </div>
           <div className='flex justify-between  items-center mt-2'>
