@@ -68,3 +68,17 @@ export const editPriceSchema=Yup.object({
     .required('Price is required'),
 
 })
+export const editLabelSchema=Yup.object({
+    label: Yup.string()
+    .matches(/^[0-9]{10}$/)
+    .required('Barcode is required')
+})
+export const editGetProductSchema=Yup.object({
+    product: Yup.string()
+    .matches(/^[0-9]{10}$/)
+    .required('Barcode is required')
+})
+export const mergeGroup=Yup.object({
+    group: Yup.string().required('Please select a group'), 
+
+})

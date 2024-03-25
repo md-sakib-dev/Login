@@ -85,7 +85,7 @@ const NewProduct = () => {
             <option value="Pos Operator">Chattoagram</option>
             <option value="Pos Verifier">Sylhet</option>
         </select>
-        {errors.brand && touched.brand ?(<p className=" text-red-700 text-sm font-semibold">{errors.brand}</p>): null}
+        {errors.brand && touched.brand ?(<p className=" text-red-700 text-[12px] font-semibold">{errors.brand}</p>): null}
     </div>
     <div className=''>
     <select className="border-0 border-b-2 border-gray-300 text-sm   text-black   rounded-md  w-[250px] md:w-[250px] h-10 font-semibold" name='type' as='select' onChange={handleChange}>
@@ -95,7 +95,7 @@ const NewProduct = () => {
             <option value="Pos Operator">Chattoagram</option>
             <option value="Pos Verifier">Sylhet</option>
         </select>
-        {errors.type && touched.type ?(<p className=" text-red-700 font-semibold">{errors.type}</p>): null}
+        {errors.type && touched.type ?(<p className=" text-red-700 text-[12px] font-semibold">{errors.type}</p>): null}
     </div>
     
 
@@ -111,19 +111,19 @@ const NewProduct = () => {
             <option value="Pos Operator">Chattoagram</option>
             <option value="Pos Verifier">Sylhet</option>
         </select>
-        {errors.house && touched.house ?(<p className=" text-red-700 text-sm font-semibold">{errors.house}</p>): null}
+        {errors.house && touched.house ?(<p className=" text-red-700 text-[12px] font-semibold">{errors.house}</p>): null}
   </div>
   <div className=''>
   <div className='flex flex-col gap-0 '>
     <p  class="text-sm">Product Price</p>
    <input  type="number" name="price" id="price"  value={values.price} onChange={handleChange} onBlur={handleBlur} placeholder='enter price'  class="border-0 border-b-2 border-gray-300 text-sm  text-black   rounded-md  w-[250px] md:w-[250px] h-10 font-semibold"/>
-   {errors.price && touched.price ? (<p className="text-red-700 font-semibold">{errors.price}</p>):null}
+   {errors.price && touched.price ? (<p className="text-red-700 text-[12px] font-semibold">{errors.price}</p>):null}
     </div>
   </div>
   <div>
-  <textarea id="message" name="message" rows="2" cols="10" placeholder="Enter Product's description" class="border border-gray-300 rounded-md px-3 py-2 mb-4 w-64 resize-none"></textarea>
+  <textarea id="message" name="message" rows="2" cols="10" placeholder="Enter Product's description" class="border text-sm border-gray-300 rounded-md px-3 py-2  w-64 resize-none"></textarea>
   {errors.message && touched.message ? (
-    <p className="text-red-700 font-semibold">{errors.message}</p>
+    <p className="text-red-700 text-[12px] font-semibold">{errors.message}</p>
   ) : null}
 
   </div>

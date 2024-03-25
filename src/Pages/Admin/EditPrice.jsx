@@ -29,7 +29,7 @@ const EditPrice = () => {
               </div>
               <div className='flex flex-col'>
               <label htmlFor="message" className='text-sm'>Product's Description</label>
-              <textarea id="message" name="message" rows="1" cols="4" class="border border-gray-300 bg-gray-200 rounded-md px-2 py-2  w-64">  
+              <textarea id="message" name="message" rows="1" cols="4" class="border border-gray-300 bg-gray-200 rounded-md px-2 py-2  w-64 resize-none">  
               </textarea>
               </div>
           </div>
