@@ -19,7 +19,7 @@ const ShowCategory = ({closeModal}) => {
   return (
     <>
   
-    <div className='  bg-gray-200 bg-opacity-95   fixed  left-0 right-0 bottom-0 top-0'>
+    <div className='  bg-gray-200 backdrop-filter backdrop-blur-sm bg-opacity-10   fixed  left-0 right-0 bottom-0 top-0'>
     </div>
       <div className='fixed top-[50%] left-[50%] max-w-40rem transform -translate-x-1/2 -translate-y-1/2 bg-green-200  py-8 px-12 border rounded-lg'>
 

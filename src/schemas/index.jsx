@@ -35,7 +35,6 @@ export const addProductSchema= Yup.object({
     price: Yup.string()
     .matches(/^\d+(\.\d{1,2})?$/, 'Price must be a valid number with up to two decimal places')
     .matches(/^[^,]*$/, 'Price cannot contain commas')
-    .matches(/^\.(?=.*\.)|^([^.]*\.[^.]*)$/, 'Only one decimal point allowed')
     .required('Price is required'),
     message: Yup.string()
     .max(200, 'Description must be at most 200 characters')
@@ -53,7 +52,6 @@ export const editProductSchema= Yup.object({
     price: Yup.string()
     .matches(/^\d+(\.\d{1,2})?$/, 'Price must be a valid number with up to two decimal places')
     .matches(/^[^,]*$/, 'Price cannot contain commas')
-    .matches(/^\.(?=.*\.)|^([^.]*\.[^.]*)$/, 'Only one decimal point allowed')
     .required('Price is required'),
     message: Yup.string()
   .max(200, 'Description must be at most 200 characters')
@@ -64,7 +62,6 @@ export const editPriceSchema=Yup.object({
     price: Yup.string()
     .matches(/^\d+(\.\d{1,2})?$/, 'Price must be a valid number with up to two decimal places')
     .matches(/^[^,]*$/, 'Price cannot contain commas')
-    .matches(/^\.(?=.*\.)|^([^.]*\.[^.]*)$/, 'Only one decimal point allowed')
     .required('Price is required'),
 
 })
@@ -102,4 +99,8 @@ export const mergeSize=Yup.object({
     size: Yup.string().required('Please select a size'), 
     newsize: Yup.string().required('Please select another size'),
 
+})
+export const giftSale=Yup.object({
+    serial : Yup.number().typeError("Serial must be a number").required("Enter serial").test('len', 'serial must be exactly 8 digits', val => val.toString().length === 8),
+    date: Yup.date().typeError("Date must be a valid date").required("Enter date"),
 })
