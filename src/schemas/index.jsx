@@ -80,5 +80,26 @@ export const editGetProductSchema=Yup.object({
 })
 export const mergeGroup=Yup.object({
     group: Yup.string().required('Please select a group'), 
+    newgroup: Yup.string().required('Please select another group'),
+
+})
+export const mergeType=Yup.object({
+    type: Yup.string().required('Please select a type'), 
+    newtype: Yup.string().required('Please select another type'),
+
+})
+export const mergeCategory=Yup.object({
+    category: Yup.string().required('Please select a category'), 
+    newcategory: Yup.string().required('Please select another category'),
+
+})
+export const mergeBrand=Yup.object({
+    brand: Yup.string().required('Please select a brand'), 
+    newbrand: Yup.string().required('Please select another brand'),
+
+})
+export const mergeSize=Yup.object({
+    size: Yup.string().required('Please select a size'), 
+    newsize: Yup.string().required('Please select another size'),
 
 })
