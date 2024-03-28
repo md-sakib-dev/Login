@@ -19,16 +19,15 @@ const ShowMerge = ({closeModal}) => {
   return (
     <>
   
-    <div className='  bg-gray-200 backdrop-filter backdrop-blur-sm bg-opacity-10  fixed  left-0 right-0 bottom-0 top-0  '>
+    <div className=' fixed inset-0 bg-black  backdrop-blur-sm bg-opacity-5    '>
     </div>
       <div className='fixed top-[50%] left-[50%] max-w-40rem transform -translate-x-1/2 -translate-y-1/2 bg-green-200  py-8 px-12 border rounded-lg '>
 
-    <div className='flex justify-between items-center gap-2 border-y border-slate-500 py-3 w-full'>
+    <div className='flex justify-center  p-4 md:p-5  border-b-2 dark:border-gray-600'>
         
      <h1 className='font-signature text-black font-bold text-2xl text-center '>Merge Group</h1>
-     <div onClick={closeModal}>
+     <div className='text-gray-400 bg-transparent hover:bg-white hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white' onClick={closeModal}>
      <IoMdClose color='black'  size={20}/>
-   
      </div>
     </div>
      <form className='flex flex-col justify-center md:justify-around items-center text-black mt-5 gap-8'onSubmit={handleSubmit}>

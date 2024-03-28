@@ -104,3 +104,16 @@ export const giftSale=Yup.object({
     serial : Yup.number().typeError("Serial must be a number").required("Enter serial").test('len', 'serial must be exactly 8 digits', val => val.toString().length === 8),
     date: Yup.date().typeError("Date must be a valid date").required("Enter date"),
 })
+
+export const  cardPay=Yup.object({
+    group: Yup.string().required('Please select a group'), 
+    newgroup: Yup.string().required('Please select another group'),
+    price: Yup.string()
+    .matches(/^\d+(\.\d{1,2})?$/, 'Price must be a valid number with up to two decimal places')
+    .matches(/^[^,]*$/, 'Price cannot contain commas')
+    .required('Price is required'),
+    mobile: Yup.string()
+    .matches(/^[01]\d{9}$/, 'Mobile number must be exactly 11 digits and start with 01')
+    .required('Mobile number is required'),
+
+})
